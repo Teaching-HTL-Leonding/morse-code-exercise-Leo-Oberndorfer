@@ -1,0 +1,8 @@
+<h1>Encode Text</h1>
+<div id="container">
+  <input id="in" type="text" placeholder="Type some text here" [(ngModel)]="textInput">
+  <div id="status">{{status()}}</div>
+  <button id="action" (click)="encode()">Encode</button>
+  <input id="out" type="text" placeholder="Encoded text will appear here" [(ngModel)]="output">
+  <button id="play" (click)="playMorseCode()">Play</button>
+</div>

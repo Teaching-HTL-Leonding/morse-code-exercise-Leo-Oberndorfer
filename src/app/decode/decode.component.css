@@ -1,0 +1,32 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#in, #out {
+  width: 400px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #3e3e3e;
+  text-wrap: wrap;
+}
+
+#action {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #3e3e3e;
+  background: #ffdfba;
+  cursor: pointer;
+}
+
+#action:disabled {
+  background: #f1f1f1;
+}
+
+#out {
+  margin-top: 50px;
+}
