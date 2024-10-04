@@ -42,7 +42,8 @@ export class EncodeComponent {
   ];
   readonly regex = '^[A-Z]+(?: [A-Z]+)*$';
   readonly textInput = signal("");
-  readonly status = computed(() => this.isValidText() ? "" : "Please only use capital letters and spaces between words.");
+  readonly isValid = computed(() => this.isValidText());
+  readonly status = computed(() => this.isValid() ? "" : "Please only use capital letters and spaces between words.");
   readonly output = signal("");
 
   constructor(private playerService: PlayerService) {}
@@ -54,7 +55,7 @@ export class EncodeComponent {
   }
 
   isValidText(){
-    return this.textInput().match(this.regex) || this.textInput() === "";
+    return this.textInput().match(this.regex);
   }
 
   async playMorseCode(){
