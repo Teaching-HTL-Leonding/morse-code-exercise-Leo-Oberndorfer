@@ -1,0 +1,7 @@
+<h1>Decode Morse Code</h1>
+<div id="container">
+  <input id="in" type="text" placeholder="Type some morse code here" [(ngModel)]="morseInput">
+  <div id="status">{{status()}}</div>
+  <button id="action" (click)="decode()" [disabled]="!isValid()">Decode</button>
+  <input id="out" type="text" placeholder="Decoded text will appear here" [(ngModel)]="output">
+</div>
